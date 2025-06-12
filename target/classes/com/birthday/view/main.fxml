@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.birthday.controller.MainController" spacing="10" style="-fx-padding: 10;">
+    <children>
+        <Text text="জন্মদিন ব্যবস্থাপনা সিস্টেম" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+        <HBox spacing="10">
+            <children>
+                <Label text="আইডি:"/>
+                <TextField fx:id="idField" promptText="IT-22038"/>
+                <Label text="নাম:"/>
+                <TextField fx:id="nameField" promptText="পূর্ণ নাম"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10">
+            <children>
+                <Label text="জন্ম তারিখ:"/>
+                <DatePicker fx:id="datePicker"/>
+                <Label text="ফোন:"/>
+                <TextField fx:id="phoneField" promptText="ফোন নম্বর"/>
+                <Label text="ইমেইল:"/>
+                <TextField fx:id="emailField" promptText="ইমেইল ঠিকানা"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10">
+            <children>
+                <Button text="যোগ করুন" onAction="#addBirthday" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+                <Button text="আপডেট করুন" onAction="#updateBirthday" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+                <Button text="মুছুন" onAction="#deleteBirthday" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10">
+            <children>
+                <Label text="খুঁজুন:"/>
+                <TextField fx:id="searchField" promptText="নাম, আইডি বা মাস"/>
+                <Button text="খুঁজুন" onAction="#searchBirthdays"/>
+            </children>
+        </HBox>
+        <HBox spacing="10">
+            <children>
+                <Button text="আজকের জন্মদিন" onAction="#showTodayBirthdays" style="-fx-background-color: #FF9800; -fx-text-fill: white;"/>
+            </children>
+        </HBox>
+
+
+        <TableView fx:id="birthdayTable" prefHeight="300" prefWidth="650">
+            <columns>
+                <TableColumn fx:id="idColumn" text="আইডি" prefWidth="100">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="nameColumn" text="নাম" prefWidth="150">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="birthDateColumn" text="জন্ম তারিখ" prefWidth="120">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="birthDate"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="phoneColumn" text="ফোন" prefWidth="120">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phone"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="emailColumn" text="ইমেইল" prefWidth="150">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="email"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </children>
+</VBox>
