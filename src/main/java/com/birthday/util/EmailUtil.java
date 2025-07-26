@@ -13,8 +13,8 @@ import java.util.Properties;
 public class EmailUtil {
 
     public static void sendEmail(String toEmail, String subject, String body) {
-        final String fromEmail = "ebrahimhossain4070@gmail.com"; // সঠিক ইমেইল
-        final String password = "davhecxd dcrpmntk";             // App Password (স্পেস ছাড়া বসাও)
+        final String fromEmail = "your gmail"; // সঠিক ইমেইল
+        final String password = "app password";             // App Password (স্পেস ছাড়া বসাও)
         // Gmail App password
 
         Properties props = new Properties();
