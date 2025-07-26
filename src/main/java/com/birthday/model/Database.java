@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Database {
-    private static final String URL = "jdbc:mysql://localhost:3306/Birthday";
+    private static final String URL = "jdbc:mysql://localhost:3306/BirthdayModify";
     private static final String USER = "root";
     private static final String PASSWORD = "ebrahim";
 

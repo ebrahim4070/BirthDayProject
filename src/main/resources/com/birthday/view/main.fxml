@@ -44,40 +44,20 @@
                 <Button text="খুঁজুন" onAction="#searchBirthdays"/>
             </children>
         </HBox>
+
         <HBox spacing="10">
             <children>
                 <Button text="আজকের জন্মদিন" onAction="#showTodayBirthdays" style="-fx-background-color: #FF9800; -fx-text-fill: white;"/>
             </children>
         </HBox>
 
-
         <TableView fx:id="birthdayTable" prefHeight="300" prefWidth="650">
             <columns>
-                <TableColumn fx:id="idColumn" text="আইডি" prefWidth="100">
-                    <cellValueFactory>
-                        <PropertyValueFactory property="id"/>
-                    </cellValueFactory>
-                </TableColumn>
-                <TableColumn fx:id="nameColumn" text="নাম" prefWidth="150">
-                    <cellValueFactory>
-                        <PropertyValueFactory property="name"/>
-                    </cellValueFactory>
-                </TableColumn>
-                <TableColumn fx:id="birthDateColumn" text="জন্ম তারিখ" prefWidth="120">
-                    <cellValueFactory>
-                        <PropertyValueFactory property="birthDate"/>
-                    </cellValueFactory>
-                </TableColumn>
-                <TableColumn fx:id="phoneColumn" text="ফোন" prefWidth="120">
-                    <cellValueFactory>
-                        <PropertyValueFactory property="phone"/>
-                    </cellValueFactory>
-                </TableColumn>
-                <TableColumn fx:id="emailColumn" text="ইমেইল" prefWidth="150">
-                    <cellValueFactory>
-                        <PropertyValueFactory property="email"/>
-                    </cellValueFactory>
-                </TableColumn>
+                <TableColumn fx:id="idColumn" text="আইডি" prefWidth="100"/>
+                <TableColumn fx:id="nameColumn" text="নাম" prefWidth="150"/>
+                <TableColumn fx:id="birthDateColumn" text="জন্ম তারিখ" prefWidth="120"/>
+                <TableColumn fx:id="phoneColumn" text="ফোন" prefWidth="120"/>
+                <TableColumn fx:id="emailColumn" text="ইমেইল" prefWidth="150"/>
             </columns>
         </TableView>
     </children>
